@@ -11,7 +11,7 @@ It’s a cool mix of coding and real-world impact!
 ## Files
 Recruitment_bias.ipynb`: The main code—loads data, trains the model, checks bias, and plots stuff.
 Adult.data`: The dataset I used (from UCI).
-Requirements.txt`: Libraries you’ll need to run it.
+Requirements.txt`: Libraries  need to run it.
 Bias_plot.png`: A bar chart I saved showing hire rates before and after my fix.
 
 ## How to Run It
