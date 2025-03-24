@@ -21,7 +21,7 @@ Bias_plot.png`: A bar chart I saved showing hire rates before and after my fix.
 4. Run all cells—takes a few minutes, especially the SHAP part!
 
 ## What I Got
-- Model accuracy: ~85% at first.
+- Model accuracy: 0.8456183003646812% at first.
 - Found males were “hired” more (1.4x vs females)—yikes!
 - After dropping ‘sex’ from the data, bias dropped to 1.1x, accuracy still ~83%.
 - SHAP showed education and gender were big drivers—check the plot in the notebook.
