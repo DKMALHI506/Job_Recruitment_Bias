@@ -1,4 +1,4 @@
-install libaries using pip%
+## install libaries using pip%
 
 import pandas as pd
 import numpy as np
@@ -10,13 +10,13 @@ import shap  # this was a pain to install, kept crashing at first
 
 
 
-                 # Load the data 
+                ## Load the data 
 cols = ['age', 'workclass', 'fnlwgt', 'education', 'edu-num', 'marital-status', 
         'occupation', 'relationship', 'race', 'sex', 'capital-gain', 'capital-loss', 
         'hours-per-week', 'native-country', 'income']
 data = pd.read_csv('/content/drive/MyDrive/datadownloand/adult (1).data', names=cols, na_values=' ?')
 
-data = data.dropna()  # drop missing stuff
+data = data.dropna()  ## drop missing stuff
 data.loc[:, 'hired'] = data['income'].apply(lambda x: 1 if x.strip() == '>50K' else 0)  
 
 
@@ -35,7 +35,7 @@ X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_
 
 
 
-# Train a basic Random Forest
+          ## Train a basic Random Forest
 model = RandomForestClassifier(n_estimators=50, random_state=42)  # smaller for speed
 model.fit(X_train, y_train)
 accuracy = model.score(X_test, y_test)
@@ -44,7 +44,7 @@ print(f"Model accuracy: {accuracy}")
 
 
 
-# Check bias by sex - the fun part
+        ## Check bias by sex 
 test_data = X_test.copy()
 test_data['hired_pred'] = model.predict(X_test)
 male_hire_rate = test_data[test_data['sex'] == 1]['hired_pred'].mean()  # 1 is male
@@ -53,7 +53,7 @@ print(f"Male hire rate: {male_hire_rate:.3f}, Female hire rate: {female_hire_rat
 
 
 
-# Plot it - making it a bit fancier
+          ## Plot it
 bars = plt.bar(['Male', 'Female'], [male_hire_rate, female_hire_rate], color=['green', 'orange'])
 plt.title("Gender Bias in AI Hiring Predictions")
 plt.ylabel("Hire Rate")
