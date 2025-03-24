@@ -26,6 +26,9 @@ Bias_plot.png`: A bar chart I saved showing hire rates before and after my fix.
 - After dropping ‘sex’ from the data, bias dropped to 1.1x, accuracy still ~83%.
 - SHAP showed education and gender were big drivers—check the plot in the notebook.
 
+![image](https://github.com/user-attachments/assets/3889e190-a840-4756-865e-6935ee5b5eb7)
+
+
 ## Why It Matters
 This ties into AI fairness, which is huge for jobs and society.
 I learned a ton about how models can mess up without us noticing perfect for the PSL Master’s vibe.
