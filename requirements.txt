@@ -1,0 +1,7 @@
+I HAVE USED THESE LIBRAIRIES
+pandas==1.5.3
+numpy==1.24.3
+scikit-learn==1.2.2
+shap==0.42.1
+matplotlib==3.7.1
+jupyter==1.0.0
